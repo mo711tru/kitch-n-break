@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  /* darker background gradient */
+  --bd-bg: linear-gradient(135deg,#020417 0%, #05101a 50%, #0a0f12 100%);
+  --bg-primary: #050812; /* very dark slate */
+  --bd-card-bg: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.6));
+  --bd-text: #dfeaf6; /* slightly muted light for contrast */
+  --bd-text-muted: rgba(223,234,246,0.72);
+  --bd-heading: #f7fbff; /* bright heading */
+  --bd-accent: #ff4f5c; /* deeper neon accent */
+}
+
+html,body,#root{height:100%}
+body{
+  color: #e6eef6;
+  background: var(--bd-bg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.bd-neon-glow{box-shadow:0 6px 18px rgba(255,107,107,0.18), 0 0 18px rgba(255,107,107,0.08)}
+.bd-card{border:1px solid rgba(255,255,255,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15));}
+
+
+.light-theme, html.light {
+  /* Light theme overrides */
+  --bd-bg: linear-gradient(180deg,#f7fbf6 0%, #eef6ec 100%);
+  --bg-primary: #f7fbf6;
+  --bd-card-bg: linear-gradient(180deg, rgba(255,255,255,1), rgba(245,245,245,1));
+  --bd-text: #0b2b1a;
+  --bd-text-muted: rgba(11,43,26,0.78);
+  --bd-heading: #062018;
+}
+
+/* Apply our variables to body and basic elements */
+html,body,#root{height:100%}
+body{
+  background: var(--bd-bg);
+  background-color: var(--bg-primary);
+  color: var(--bd-text);
+  font-family: 'Urbanist', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Utilities that ensure readable text */
+.bd-neon-glow{box-shadow:0 6px 18px rgba(255,107,107,0.18), 0 0 18px rgba(255,107,107,0.08)}
+.bd-card{border:1px solid rgba(255,255,255,0.04); background: var(--bd-card-bg); color: var(--bd-text)}
+
+h1,h2,h3{color:var(--bd-heading); font-family: 'Urbanist', Inter, sans-serif; font-weight:700}
+p,li,span,label,input,button{color:var(--bd-text)}
+.muted{color:var(--bd-text-muted)}
+
+a,button{color:var(--bd-accent)}
+
+.bd-card h3, .bd-card p, .bd-card a { color: var(--bd-text) }
+
+*:focus{outline-color:var(--bd-accent); outline-offset:2px}
+:root {}

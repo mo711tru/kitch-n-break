@@ -1,0 +1,28 @@
+{
+  "name": "kitch-n-break",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "seed": "node scripts/seed-samples.js",
+    "genpdf": "node scripts/generate-pdf.js",
+    "genpdf-pdfkit": "node scripts/generate-pdf-pdfkit.js"
+  },
+  "dependencies": {
+    "firebase": "^9.23.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "firebase-tools": "^15.19.1",
+    "pdfkit": "^0.19.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.19",
+    "vite": "^5.0.0"
+  }
+}

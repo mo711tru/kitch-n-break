@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitch n Break — Projektübersicht</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;margin:40px;color:#222}
+      h1{font-size:28px}
+      h2{font-size:20px;margin-top:22px}
+      p{line-height:1.5}
+      pre{background:#f7f7f7;padding:12px;border-radius:6px;overflow:auto}
+      ul{margin-left:18px}
+      .meta{color:#666;font-size:13px}
+    </style>
+  </head>
+  <body>
+    <h1>Kitch n Break — Zusammenfassung der Implementierung</h1>
+    <p class="meta">Erstellt: <!--DATE--> </p>
+
+    <h2>Ziel</h2>
+    <p>Ein kleines React-Projekt (Vite) mit Rezeptverwaltung — Home, Rezeptliste, Rezeptdetails, Formular zum Erstellen von Rezepten und Login. Integration mit Firebase (Auth, Firestore, Storage) und Hosting-Konfiguration vorbereitet.</p>
+
+    <h2>Was wurde umgesetzt</h2>
+    <ul>
+      <li>Projekt-Scaffold mit Vite + React.</li>
+      <li>Kernseiten: Home, Rezeptdetails, CreateRecipe, Login.</li>
+      <li>Komponenten: Navbar, Footer, RecipeCard, RecipeList, SearchBar, InputField, Button.</li>
+      <li>Firebase-Integration: <code>src/firebase.js</code> exportiert <code>auth</code>, <code>db</code>, <code>storage</code>, <code>analytics</code>.</li>
+      <li>Firestore-Services: <code>src/services/recipes.js</code> (fetch/create).</li>
+      <li>Bilder-Upload in Firebase Storage aus dem Create-Formular.</li>
+      <li>Responsives Styling und Such-/Filter-Funktion in der Home-Ansicht.</li>
+      <li>Hosting-Konfiguration: <code>firebase.json</code> und <code>.firebaserc</code> (public: <code>dist</code>).</li>
+    </ul>
+
+    <h2>Wesentliche Dateien</h2>
+    <ul>
+      <li><code>index.html</code>, <code>src/main.jsx</code>, <code>src/App.jsx</code></li>
+      <li>Seiten: <code>src/pages/Home.jsx</code>, <code>src/pages/RecipeDetails.jsx</code>, <code>src/pages/CreateRecipe.jsx</code>, <code>src/pages/Login.jsx</code></li>
+      <li>Komponenten: <code>src/components/*</code></li>
+      <li>Firebase: <code>src/firebase.js</code></li>
+      <li>Services: <code>src/services/recipes.js</code></li>
+      <li>Styling: <code>src/index.css</code></li>
+      <li>Hosting: <code>firebase.json</code>, <code>.firebaserc</code></li>
+    </ul>
+
+    <h2>Wichtige Befehle</h2>
+    <p>Lokale Entwicklung:</p>
+    <pre>npm install
+npm run dev</pre>
+
+    <p>Build & Deployment:</p>
+    <pre>npm run build
+# interactive login on your machine
+npx firebase login
+npx firebase deploy --only hosting:kitch-n-break-34666</pre>
+
+    <h2>Hinweise zu Firebase</h2>
+    <p>Die App wurde mit Ihrem Firebase-Projekt konfiguriert. Zum deployen benötigen Sie eine gültige CLI-Authentifizierung (lokal: <code>firebase login</code> oder CI-Token mit <code>firebase login:ci</code>).</p>
+
+    <h2>Vorschläge / nächste Schritte</h2>
+    <ul>
+      <li>Feinere UI-Anpassung passend zu den Wireframes (Farben, Layout, Footer).</li>
+      <li>Favoriten, User-spezifische Daten und Firestore-Sicherheitsregeln.</li>
+      <li>Unit-Tests und End-to-End-Tests.</li>
+      <li>Optional: Deployment und HTTPS-Hosting via Firebase Hosting (bereits vorbereitet).</li>
+    </ul>
+
+    <h2>Kontakt</h2>
+    <p>Vorbereitet von: Ihr Entwicklerpartner — Kitch n Break Prototype</p>
+  </body>
+</html>
