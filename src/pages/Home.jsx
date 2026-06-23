@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import SearchBar from '../components/SearchBar'
 import RecipeList from '../components/RecipeList'
 import LoginInline from './LoginInLine' // Wir binden das Login-Formular direkt ein
+import TestFirestoreButton from '../components/TestFirestoreButton'
 import { fetchRecipes } from '../services/recipes'
 import { RECIPES } from '../data/recipes'
 import { auth } from '../firebase'
@@ -60,6 +61,13 @@ export default function Home(){
                 <Link to="/recipes-hub" className="mt-4 inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 font-medium">{t('home.goToHub')}</Link>
               </div>
             )}
+          </div>
+        </div>
+
+        {/* Test Firestore Button (sichtbar für alle) */}
+        <div className="max-w-6xl mx-auto px-4 mb-8">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 text-center">
+            <TestFirestoreButton />
           </div>
         </div>
 
